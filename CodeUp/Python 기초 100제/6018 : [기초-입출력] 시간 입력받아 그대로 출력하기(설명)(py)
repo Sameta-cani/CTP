@@ -1,0 +1,5 @@
+import sys
+
+hour, minute = sys.stdin.readline().rstrip().split(':')
+
+print(hour, minute, sep=':')
