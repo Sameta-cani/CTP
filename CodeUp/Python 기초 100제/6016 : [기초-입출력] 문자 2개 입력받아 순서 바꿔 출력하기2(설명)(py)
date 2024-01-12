@@ -1,0 +1,5 @@
+import sys
+
+c1, c2 = sys.stdin.readline().rstrip().split()
+
+print(c2, c1)
