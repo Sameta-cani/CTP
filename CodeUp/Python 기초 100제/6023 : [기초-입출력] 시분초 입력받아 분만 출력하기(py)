@@ -1,0 +1,5 @@
+import sys
+
+m = sys.stdin.readline().rstrip().split(':')[1]
+
+print(m)
