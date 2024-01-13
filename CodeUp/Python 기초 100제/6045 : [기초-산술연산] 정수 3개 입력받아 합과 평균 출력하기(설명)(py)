@@ -1,0 +1,7 @@
+import sys
+
+a, b, c = map(int, sys.stdin.readline().rstrip().split())
+
+tot = a + b + c
+
+print(f'{tot} {tot / 3:.2f}')
