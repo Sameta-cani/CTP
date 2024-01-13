@@ -1,0 +1,5 @@
+import sys
+
+f = float(sys.stdin.readline().rstrip())
+
+print(f'{f:.2f}')
