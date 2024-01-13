@@ -1,0 +1,5 @@
+import sys
+
+n = ord(sys.stdin.readline().rstrip())
+
+print(chr(n+1))
