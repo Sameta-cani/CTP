@@ -1,0 +1,5 @@
+import sys
+
+n = int(sys.stdin.readline().rstrip(), 16) # 16진수로 입력
+
+print(f'{n:o}') # 8진수로 출력
