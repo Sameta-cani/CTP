@@ -1,0 +1,5 @@
+import sys
+
+nums = list(map(int, sys.stdin.readline().rstrip().split()))
+
+print(*['even' if i % 2 == 0 else 'odd' for i in nums], sep='\n')
