@@ -1,0 +1,8 @@
+import sys
+
+m = int(sys.stdin.readline().rstrip()) // 3
+
+if m == 1: print('spring')
+elif m == 2: print('summer')
+elif m == 3: print('fall')
+else: print('winter')
