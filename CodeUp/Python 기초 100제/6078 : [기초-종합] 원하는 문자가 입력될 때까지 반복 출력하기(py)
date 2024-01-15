@@ -1,0 +1,7 @@
+import sys
+
+while True:
+    ch = sys.stdin.readline().rstrip()
+    print(ch)
+    if ch == 'q':
+        break
