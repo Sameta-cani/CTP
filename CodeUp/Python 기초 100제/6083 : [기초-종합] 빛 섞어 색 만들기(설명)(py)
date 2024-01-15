@@ -1,0 +1,10 @@
+import sys
+
+r, g, b = map(int, sys.stdin.readline().rstrip().split())
+
+for i in range(r):
+    for j in range(g):
+        for k in range(b):
+            print(i, j, k)
+            
+print((i+1)*(j+1)*(k+1))
