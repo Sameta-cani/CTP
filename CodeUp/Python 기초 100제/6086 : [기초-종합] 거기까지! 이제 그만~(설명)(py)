@@ -1,0 +1,16 @@
+import sys
+
+bound = int(sys.stdin.readline().rstrip())
+low, high = 0, bound
+
+while low < high:
+    mid = (low + high) // 2
+    sum_mid = mid * (mid + 1) // 2 # 등차수열의 합 공식
+
+    if sum_mid < bound: 
+        low = mid + 1
+    else:
+        high = mid
+
+result = low * (low + 1) // 2
+print(result)
