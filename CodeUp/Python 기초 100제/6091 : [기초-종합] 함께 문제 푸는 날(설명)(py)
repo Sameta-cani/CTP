@@ -1,0 +1,13 @@
+import sys
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+def lcm(a, b):
+    return (a * b) // gcd(a, b)
+
+n1, n2, n3 = map(int, sys.stdin.readline().rstrip().split())
+
+print(lcm(lcm(n1, n2), n3))
