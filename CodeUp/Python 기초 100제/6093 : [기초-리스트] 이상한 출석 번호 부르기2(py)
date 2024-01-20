@@ -1,0 +1,6 @@
+import sys
+
+n = int(sys.stdin.readline().rstrip())
+arr = [int(x) for x in sys.stdin.readline().strip().split()]
+
+print(*arr[::-1])
