@@ -1,0 +1,11 @@
+import sys
+
+n = int(sys.stdin.readline().rstrip())
+board = [[0] * 19 for _ in range(19)]
+
+for _ in range(n):
+    x, y = map(int, sys.stdin.readline().rstrip().split())
+    board[x-1][y-1] = 1
+
+for row in board:
+    print(*row)
