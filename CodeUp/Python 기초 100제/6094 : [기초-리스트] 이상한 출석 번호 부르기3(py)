@@ -1,0 +1,14 @@
+import sys
+import heapq
+
+def heapsort(iterable):
+    h = []
+    for value in iterable:
+        heapq.heappush(h, value)
+    return [heapq.heappop(h) for _ in range(len(h))]
+
+n = int(sys.stdin.readline().rstrip())
+arr = [int(x) for x in sys.stdin.readline().rstrip().split()]
+arr = heapsort(arr)
+
+print(arr[0])
