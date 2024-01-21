@@ -1,8 +1,10 @@
-boards = [[int(x) for x in input().split()] for _ in range(19)]
-n = int(input())
+import sys
+
+boards = [[int(x) for x in sys.stdin.readline().rstrip().split()] for _ in range(19)]
+n = int(sys.stdin.readline().rstrip())
 
 for _ in range(n):
-    x, y = map(int, input().split())
+    x, y = map(int, sys.stdin.readline().rstrip().split())
     x, y = x-1, y-1
     for i in range(19):
         boards[i][y] = int(not boards[i][y])
