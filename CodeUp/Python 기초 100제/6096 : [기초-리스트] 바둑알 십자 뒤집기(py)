@@ -1,0 +1,12 @@
+boards = [[int(x) for x in input().split()] for _ in range(19)]
+n = int(input())
+
+for _ in range(n):
+    x, y = map(int, input().split())
+    x, y = x-1, y-1
+    for i in range(19):
+        boards[i][y] = int(not boards[i][y])
+        boards[x][i] = int(not boards[x][i])
+
+for row in boards:
+    print(*row)
