@@ -1,4 +1,6 @@
-S = input()
+import sys
+
+S = sys.stdin.readline().rstrip()
 
 time = 0
 for c in S:
