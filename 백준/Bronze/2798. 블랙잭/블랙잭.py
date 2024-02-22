@@ -1,10 +1,12 @@
 from itertools import combinations
-from bisect import bisect
 
 N, M = map(int, input().split())
 cards = list(map(int, input().split()))
 
-comb = list(map(sum, list(combinations(cards, 3))))
-comb.sort()
+max_sum = 0
+for comb in combinations(cards, 3):
+    temp_sum = sum(comb)
+    if temp_sum <= M:
+        max_sum = max(max_sum, temp_sum)
 
-print(comb[bisect(comb, M)-1])
+print(max_sum)
