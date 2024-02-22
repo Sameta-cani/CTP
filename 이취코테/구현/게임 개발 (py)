@@ -1,0 +1,39 @@
+N, M = map(int, input().split())
+x, y, direction = map(int, input().split())
+
+maps = [list(map(int, input().split())) for _ in range(N)]
+maps[x][y] = 1 # 현재 위치 방문 처리
+
+move_directions = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+
+def turn_left(direction):
+    return (direction - 1) % 4
+
+count = 1
+turn_time = 0
+
+while True:
+    direction = turn_left(direction)
+    nx = x + move_directions[direction][0]
+    ny = y + move_directions[direction][1]
+
+    if maps[nx][ny] == 0:
+        maps[nx][ny] = 1 # 방문 처리
+        x, y = nx, ny
+        count += 1
+        turn_time = 0
+        continue
+    else:
+        turn_time += 1
+
+    if turn_time == 4:
+        nx = x - move_directions[direction][0]
+        ny = y - move_directions[direction][1]
+
+        if maps[nx][ny] == 0:
+            x, y = nx, ny
+            turn_time = 0
+        else:
+            break
+
+print(count)
