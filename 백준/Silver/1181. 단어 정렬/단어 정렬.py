@@ -1,7 +1,10 @@
+import sys
+
 N = int(input())
 
-array = list(set(input() for _ in range(N)))
+array = list(set(sys.stdin.readline().rstrip() for _ in range(N)))
 
 array.sort(key=lambda x: (len(x), x))
 
-print(*array, sep='\n')
+for item in array:
+    sys.stdout.write(item + '\n')
