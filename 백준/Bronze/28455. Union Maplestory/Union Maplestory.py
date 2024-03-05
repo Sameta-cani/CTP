@@ -11,14 +11,11 @@ def get_stat(level):
         return 4
     else:
         return 5
-    
+
 N = int(input())
 levels = [int(input()) for _ in range(N)]
-stats = list(map(get_stat, levels))
 
-if N < 42:
-    print(sum(levels), sum(stats))
-else:
-    levels_sorted = sorted(levels, reverse=True)
-    stats = list(map(get_stat, levels_sorted))
-    print(sum(levels_sorted[:42]), sum(stats[:42]))
+top_levels = sorted(levels, reverse=True)[:min(N, 42)]
+top_stats = list(map(get_stat, top_levels))
+
+print(sum(top_levels), sum(top_stats))
