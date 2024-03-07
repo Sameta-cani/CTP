@@ -1,10 +1,11 @@
 from collections import Counter
+import sys
 
 case = 0
 
 while True:
     case += 1
-    original = input()
+    original = sys.stdin.readline().rstrip()
     TMP = input()
     if original == 'END' and TMP == 'END':
         break
