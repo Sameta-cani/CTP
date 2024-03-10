@@ -1,3 +1,5 @@
+import sys
+
 def selection_sort(array, limit):
     count = 0
     for last in range(len(array)-1, 0, -1):
@@ -15,7 +17,7 @@ def selection_sort(array, limit):
     print(-1)
 
 
-N, K = map(int, input().split())
-array = list(map(int, input().split()))
+N, K = map(int, sys.stdin.readline().rstrip().split())
+array = list(map(int, sys.stdin.readline().rstrip().split()))
 
 selection_sort(array, K)
