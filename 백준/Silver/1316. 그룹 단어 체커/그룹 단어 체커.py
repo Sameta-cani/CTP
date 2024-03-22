@@ -1,22 +1,14 @@
-import sys
-
-N = int(sys.stdin.readline().rstrip())
+N = int(input())
 count = 0
 
 for _ in range(N):
-    word = sys.stdin.readline().rstrip()
-    is_group_word = True
-    used_chars = set()
-    prev_char = ''
-
-    for char in word:
-        if char != prev_char: # 현재 문자가 이전 문자와 다를 경우
-            if char in used_chars: # 이미 나타난 문자인지 확인
-                is_group_word = False
+    word = input()
+    is_groupword = True
+    for i in range(len(word) - 1):
+        if word[i] != word[i + 1]: # 현재 문자와 다음 문자가 다르면
+            if word[i] in word[i + 1:]: # 현재 문자가 이후 문자열에 나타난다면 그룹 단어가 아님
+                is_groupword = False
                 break
-            used_chars.add(char) # 새로운 문자를 set에 추가
-        prev_char = char
-
-    count += is_group_word
+    count += is_groupword
 
 print(count)
