@@ -1,38 +1,20 @@
 import sys
 input = sys.stdin.readline
 
-class stack():
-    def __init__(self):
-        self.array = list()
-    def size(self):
-        return len(self.array)
-    def push(self, value):
-        self.array.append(value)
-    def pop(self):
-        if self.size() <= 0:
-            return -1
-        else:
-            value = self.array.pop()
-            return value
-    def empty(self):
-        return 1 if self.size() == 0 else 0
-    def top(self):
-        return self.array[-1] if self.size() > 0 else -1
-    
-Stack = stack()
-
 N = int(input().rstrip())
+stack = []
 
 for _ in range(N):
-    command = input().rstrip().split(' ')
+    command = input().rstrip().split()
     prompt = command[0]
+
     if prompt == 'push':
-        Stack.push(int(command[1]))
+        stack.append(int(command[1]))
     elif prompt == 'pop':
-        print(Stack.pop())
+        print(stack.pop() if stack else -1)
     elif prompt == 'size':
-        print(Stack.size())
+        print(len(stack))
     elif prompt == 'empty':
-        print(Stack.empty())
+        print(1 if not stack else 0)
     elif prompt == 'top':
-        print(Stack.top())
+        print(stack[-1] if stack else -1)
