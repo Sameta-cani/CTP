@@ -25,11 +25,12 @@ def dijkstra(start):
                 distance[i[0]] = cost
                 heapq.heappush(q, (cost, i[0]))
 
+
 dijkstra(X)
 
 result = [i for i in range(1, N + 1) if distance[i] == K]
 
 if result:
-    print(*result, sep='\n')
+    print(*result, end='\n')
 else:
     print(-1)
