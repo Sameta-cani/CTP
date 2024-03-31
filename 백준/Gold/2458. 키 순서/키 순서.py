@@ -7,9 +7,7 @@ N, M = map(int, input().split())
 graph = [[INF] * (N + 1) for _ in range(N + 1)]
 
 for a in range(1, N + 1):
-    for b in range(1, N + 1):
-        if a == b:
-            graph[a][b] = 0
+    graph[a][a] = 0
 
 for _ in range(M):
     a, b = map(int, input().split())
@@ -22,8 +20,8 @@ for k in range(1, N + 1):
 
 count = 0
 for a in range(1, N + 1):
-    is_possible = True
     for b in range(1, N + 1):
+        is_possible = True
         if graph[a][b] == INF and graph[b][a] == INF:
             is_possible = False
             break
