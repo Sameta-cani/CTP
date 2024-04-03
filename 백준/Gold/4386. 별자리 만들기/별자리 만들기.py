@@ -28,8 +28,6 @@ for i in range(1, N + 1):
     x, y = map(float, input().split())
     stars.append((x, y, i))
 
-stars.sort()
-
 for i in range(N):
     for j in range(i, N):
         edges.append((math.sqrt((stars[i][0] - stars[j][0])**2 + (stars[i][1] - stars[j][1])**2), stars[i][2] ,stars[j][2]))
