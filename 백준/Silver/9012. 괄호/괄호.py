@@ -7,10 +7,9 @@ for tc in range(int(input())):
         if s == '(':
             stack.append(s)
         else:
-            if stack:
-                stack.pop()
-            else:
+            if not stack:
                 is_VPS = False
                 break
+            stack.pop()
 
     print('YES' if is_VPS and not stack else 'NO')
