@@ -2,17 +2,12 @@ from collections import deque
 
 N, K = map(int, input().split())
 
-queue = deque(list(range(1, N + 1)))
-count = 0
+queue = deque(range(1, N + 1))
 
-res = []
+elimination_order = []
+
 while queue:
-    count += 1
-    n = queue.popleft()
-    if count == K:
-        count = 0
-        res.append(str(n))
-    else:
-        queue.append(n)
+    queue.rotate(-(K - 1))
+    elimination_order.append(str(queue.popleft()))
 
-print('<' + ', '.join(res) + '>')
+print("<" + ", ".join(elimination_order) + ">")
