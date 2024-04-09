@@ -1,16 +1,16 @@
 while True:
     edges = list(map(int, input().split()))
-    if edges == [0, 0, 0]:
-        break
-    max_edge = max(edges)
-    sum_edge = sum(edges)
-    unique_edges = len(set(edges))
+    unq_edges = set(edges)
 
-    if sum_edge - max_edge <= max_edge:
-        print('Invalid')
-    elif unique_edges == 1:
-        print('Equilateral')
-    elif unique_edges == 2:
-        print('Isosceles')
+    if unq_edges == {0}:
+        break
+
+    if max(edges) >= sum(edges) - max(edges):
+        print("Invalid")
     else:
-        print('Scalene')
+        if len(unq_edges) == 1:
+            print("Equilateral")
+        elif len(unq_edges) == 2:
+            print("Isosceles")
+        else:
+            print("Scalene")
