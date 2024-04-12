@@ -1,6 +1,0 @@
-import sys
-
-c1 = sys.stdin.readline().rstrip()
-c2 = sys.stdin.readline().rstrip()
-
-print(f'{c2}\n{c1}')

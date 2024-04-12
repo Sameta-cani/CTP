@@ -1,5 +1,0 @@
-import sys
-
-f = float(sys.stdin.readline().rstrip())
-
-print(f)
