@@ -1,36 +1,40 @@
-import heapq
+from collections import deque
 import sys
-input = sys.stdin.readline
-INF = int(1e9)
 
+input = sys.stdin.readline
+
+# 도시의 개수, 도로의 개수, 거리 정보, 출발 도시 번호
 N, M, K, X = map(int, input().split())
 graph = [[] for _ in range(N + 1)]
-distance = [INF] * (N + 1)
 
+# 모든 도로 정보 입력받기
 for _ in range(M):
     a, b = map(int, input().split())
-    graph[a].append((b, 1))
+    graph[a].append(b)
 
-def dijkstra(start):
-    q = []
-    heapq.heappush(q, (0, start))
-    distance[start] = 0
-    while q:
-        dist, now = heapq.heappop(q)
-        if distance[now] < dist:
-            continue
-        for i in graph[now]:
-            cost = dist + i[1]
-            if cost < distance[i[0]]:
-                distance[i[0]] = cost
-                heapq.heappush(q, (cost, i[0]))
+# 모든 도시에 대한 최단 거리 초기화
+distance = [-1] * (N + 1)
+distance[X] = 0 # 출발 도시까지의 거리는 0으로 설정
 
+# 너비 우선 탐색(BFS) 수행
+q = deque([X])
+while q:
+    now = q.popleft()
+    # 현재 도시에서 이동할 수 있는 모든 도시를 확인
+    for next_node in graph[now]:
+        # 아직 방문하지 않은 도시라면
+        if distance[next_node] == -1:
+            # 최단 거리 갱신
+            distance[next_node] = distance[now] + 1
+            q.append(next_node)
 
-dijkstra(X)
+# 최단 거리가 K인 모든 도시의 번호를 오름차순으로 출력
+check = False
+for idx in range(1, N + 1):
+    if distance[idx] == K:
+        print(idx)
+        check = True
 
-result = [i for i in range(1, N + 1) if distance[i] == K]
-
-if result:
-    print(*result, end='\n')
-else:
+# 만약 최단 거리가 K인 도시가 없다면, -1 출력
+if not check:
     print(-1)
