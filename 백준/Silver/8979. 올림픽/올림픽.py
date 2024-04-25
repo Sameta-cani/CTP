@@ -1,4 +1,4 @@
-from collections import Counter
+from collections import deque
 import sys
 
 input = sys.stdin.readline
@@ -6,18 +6,21 @@ input = sys.stdin.readline
 N, K = map(int, input().split())
 
 array = []
-for _ in range(1, N + 1):
+
+for _ in range(N):
     data = list(map(int, input().split()))
-    nth, info = data[0], data[1:]
-    if nth == K:
-        main = ''.join(map(str, info))
-    array.append(''.join(map(str, info)))
+    if data[0] == K:
+        target = data[1:]
+    array.append(data)
 
-array.sort(reverse=True)
-count = Counter(array)
+array = sorted(array, key=lambda x: (x[1], x[2], x[3]), reverse=True)
+array = deque(array)
 
+count = 0
+while array:
+    current = array.popleft()
+    count += 1
+    if current[1:] == target:
+        break
 
-ans = 0
-for idx in range(array.index(main)):
-    ans += count.get(array[idx])
-print(ans + 1)
+print(count)
