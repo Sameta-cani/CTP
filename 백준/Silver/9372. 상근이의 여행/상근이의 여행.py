@@ -2,34 +2,21 @@ import sys
 
 input = sys.stdin.readline
 
-def find_parent(parent, x):
-    if parent[x] != x:
-        parent[x] = find_parent(parent, parent[x])
-    return parent[x]
+def DFS(graph, v, visited, cnt):
+    visited[v] = True
+    for node in graph[v]:
+        if not visited[node]:
+            cnt = DFS(graph, node, visited, cnt + 1)
+    return cnt
 
-def union_parent(parent, a, b):
-    a = find_parent(parent, a)
-    b = find_parent(parent, b)
-    if a < b:
-        parent[b] = a
-    else:
-        parent[a] = b
-
-for tc in range(int(input())):
+for _ in range(int(input())):
     N, M = map(int, input().split())
-    parent = list(range(N + 1))
-
-    edges = []
-    result = 0
-
+    graph = [[] for _ in range(1 + N)]
+    visited = [False] * (1 + N)
     for _ in range(M):
         a, b = map(int, input().split())
-        edges.append((a, b))
+        graph[a].append(b)
+        graph[b].append(a)
 
-    for edge in edges:
-        a, b = edge
-        if find_parent(parent, a) != find_parent(parent, b):
-            union_parent(parent, a, b)
-            result += 1
-
-    print(result)
+    count = DFS(graph, 1, visited, 0)
+    print(count)
