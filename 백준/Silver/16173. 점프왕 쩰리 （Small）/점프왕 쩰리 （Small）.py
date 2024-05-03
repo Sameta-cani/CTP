@@ -1,30 +1,22 @@
-from collections import deque
 import sys
 
 input = sys.stdin.readline
 
-def BFS(maps, N):
-    queue = deque([(0, 0)])
-    visited = [[False] * N for _ in range(N)]
-
-    while queue:
-        x, y = queue.popleft()
-        dist = maps[x][y]
-        visited[x][y] = True
-
-        for nx, ny in ((x + dist, y), (x, y + dist)):
-            if 0 <= nx < N and 0 <= ny < N and not visited[nx][ny]:
-                if nx == N - 1 and ny == N - 1:
-                    return 'HaruHaru'
-                queue.append((nx, ny))
-
-    return 'Hing'
-
 N = int(input())
 maps = [list(map(int, input().split())) for _ in range(N)]
-
-queue = deque([(0, 0)])
 visited = [[False] * N for _ in range(N)]
 
-ans = BFS(maps, N)
-print(ans)
+def DFS(x, y):
+    visited[x][y] = True
+    dist = maps[x][y]
+
+    for nx, ny in ((x + dist, y), (x, y + dist)):
+        if 0 <= nx < N and 0 <= ny < N and not visited[nx][ny]:
+            DFS(nx, ny)
+
+DFS(0, 0)
+
+if visited[N - 1][N - 1]:
+    print('HaruHaru')
+else:
+    print('Hing')
