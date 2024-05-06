@@ -1,6 +1,8 @@
 from collections import deque
 import sys
 
+input = sys.stdin.readline
+
 N, K = map(int, input().split())
 data = [int(input()) for _ in range(N)]
 visited = [False] * N
