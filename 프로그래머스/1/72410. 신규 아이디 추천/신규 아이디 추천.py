@@ -1,19 +1,10 @@
-def del_dot(id: str):
-    if id.startswith('.'):
-        id = id[1:]
-    if id.endswith('.'):
-        id = id[:-1]
-        
-    return id
-
-
 def solution(new_id: str):
     answer = ''
     tmp = new_id.lower()
-    permit_list = ['-', '_', '.']
+    allowed_list = ['-', '_', '.']
     prev = ''
     for ch in tmp:
-        if ch.isalpha() or ch.isalnum() or ch in permit_list:
+        if ch.isalpha() or ch.isalnum() or ch in allowed_list:
             if prev != '.' and ch == '.':
                 prev = ch
             elif prev == '.' and ch == '.':
@@ -21,12 +12,11 @@ def solution(new_id: str):
             answer += ch
             prev = ch
             
-    answer = del_dot(answer)
-    if answer == '':
+    answer = answer.strip('.')
+    if not answer:
         answer = 'a'
-    answer = answer[:15]
-    answer = del_dot(answer)
+    answer = answer[:15].rstrip('.')
     while len(answer) <= 2:
-        end_alpha = answer[-1]
-        answer += end_alpha
+        answer += answer[-1]
+        
     return answer
