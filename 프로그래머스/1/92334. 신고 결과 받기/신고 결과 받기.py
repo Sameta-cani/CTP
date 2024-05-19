@@ -1,18 +1,12 @@
-from collections import defaultdict
-
 def solution(id_list: list, report: list, k: int) -> list:
-    tmp = {name: 0 for name in id_list}
-    report_status = defaultdict(list) # 사용자가 신고한 유저 목록
-    cumulative_report = defaultdict(int) # 누적 신고 수
+    answer = [0] * len(id_list)
+    cumulative_reports = {name: 0 for name in id_list}
+    
     for data in set(report):
-        a, b = data.split()
-        report_status[a].append(b)
-        cumulative_report[b] += 1
-    
-    for ik, v in report_status.items():
-        for name in v:
-            if name in cumulative_report and cumulative_report[name] >= k:
-                tmp[ik] += 1
-    
-    answer = [v for v in tmp.values()]
+        cumulative_reports[data.split()[1]] += 1
+        
+    for data in set(report):
+        if cumulative_reports[data.split()[1]] >= k:
+            answer[id_list.index(data.split()[0])] += 1
+            
     return answer
