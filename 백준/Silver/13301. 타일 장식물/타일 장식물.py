@@ -4,9 +4,9 @@ input = sys.stdin.readline
 
 N = int(input())
 
-dp = [1, 1] + [0] * 78
+dp = [4, 6] + [0] * 80
 
-for i in range(2, 80):
+for i in range(2, N + 1):
     dp[i] = dp[i - 2] + dp[i - 1]
     
-print(dp[N] * 2 + dp[N - 1] * 2)
+print(dp[N - 1])
