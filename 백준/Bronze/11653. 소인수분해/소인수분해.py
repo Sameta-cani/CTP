@@ -1,12 +1,14 @@
-def factorize(n):
-    factor = 2
-    while factor * factor <= n:
-        while n % factor == 0:
-            print(factor)
-            n //= factor
-        factor += 1
-    if n > 1:
-        print(n)
+import sys
+
+input = sys.stdin.readline
 
 N = int(input())
-factorize(N)
+     
+factor = 2
+while factor * factor <= N:
+    while N % factor == 0:
+        print(factor)
+        N //= factor
+    factor += 1
+if N > 1:
+    print(N)
