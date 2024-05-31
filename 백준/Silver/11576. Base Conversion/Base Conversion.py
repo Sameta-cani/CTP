@@ -10,15 +10,13 @@ def convert_base(n: int, base: int) -> None:
     while n:
         digits.append(int(n % base))
         n //= base
-    
+        
     print(*digits[::-1], sep=' ')
-
+    
 A, B = map(int, input().split()) # A진법 -> B진법
-m = int(input()) 
+m = int(input())
 data = list(map(int, input().split()))[::-1]
 
-org = 0
-for idx in range(len(data)):
-    org += data[idx] * A**idx
-    
+org = sum(data[idx] * (A ** idx) for idx in range(m))
+
 convert_base(org, B)
