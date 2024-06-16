@@ -1,15 +1,8 @@
 from itertools import combinations, product
 from collections import Counter
 
-def calculate_distribution(dice):
-    """각 주사위 조합의 가능한 점수 분포를 계산합니다."""
-    distributions = []
-    for die in dice:
-        distributions.append(Counter(die))
-    return distributions
 
-def calculate_probabilities(dice):
-    """주사위 조합의 모든 가능한 점수와 그 확률을 계산합니다."""
+def calculate_probabilities(dice: list) -> dict:
     num_dice = len(dice)
     possible_scores = Counter()
     
@@ -22,24 +15,10 @@ def calculate_probabilities(dice):
     
     return probabilities
 
-def expected_value(probabilities):
-    """확률 분포에 기반한 기대값을 계산합니다."""
-    return sum(score * prob for score, prob in probabilities.items())
-
-def win_probability(A_probs, B_probs):
-    """A가 B를 이길 확률을 계산합니다."""
-    win_prob = 0
-    for a_score, a_prob in A_probs.items():
-        for b_score, b_prob in B_probs.items():
-            if a_score > b_score:
-                win_prob += a_prob * b_prob
-    return win_prob
-
-def solution(dice):
+def solution(dice: list) -> list:
     n = len(dice) // 2
     max_win_prob = 0
-    best_combination = []
-
+    
     for A_indices in combinations(range(len(dice)), n):
         B_indices = [i for i in range(len(dice)) if i not in A_indices]
         
@@ -49,11 +28,15 @@ def solution(dice):
         A_probs = calculate_probabilities(A_dice)
         B_probs = calculate_probabilities(B_dice)
         
-        win_prob = win_probability(A_probs, B_probs)
+        win_prob = 0
+        for a_score, a_prob in A_probs.items():
+            for b_score, b_prob in B_probs.items():
+                if a_score > b_score:
+                    win_prob += a_prob * b_prob
         
         if win_prob > max_win_prob:
             max_win_prob = win_prob
             best_combination = A_indices
-
+            
     ans = [val + 1 for val in best_combination]
     return ans
