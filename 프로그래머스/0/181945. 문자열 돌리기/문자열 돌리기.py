@@ -1,3 +1,3 @@
 str = input()
 
-print(*[c for c in str], sep='\n')
+print('\n'.join(str))
