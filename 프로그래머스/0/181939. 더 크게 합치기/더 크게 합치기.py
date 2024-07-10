@@ -1,3 +1,3 @@
 def solution(a, b):
-    answer = max(int(str(a) + str(b)), int(str(b) + str(a)))
+    answer = int(max(f"{a}{b}", f"{b}{a}"))
     return answer
