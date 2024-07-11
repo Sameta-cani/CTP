@@ -1,0 +1,3 @@
+def solution(n: int) -> int:
+    answer = sum([i**2 for i in range(2, n + 1, 2)]) if n % 2 == 0 else sum([i for i in range(1, n + 1, 2)])
+    return answer
