@@ -1,6 +1,4 @@
-import sys
-
-A, B = map(int, sys.stdin.readline().rstrip().split())
+A, B = map(int, input().split())
 
 print(A + B)
 print(A - B)
