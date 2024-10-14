@@ -1,1 +1,3 @@
-print('2024-03-19')
+import datetime
+
+print(datetime.date.today())
