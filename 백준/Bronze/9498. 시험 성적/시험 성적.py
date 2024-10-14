@@ -1,9 +1,3 @@
-import sys
+score = int(input())
 
-score = int(sys.stdin.readline().rstrip())
-
-if score >= 90: print('A')
-elif score >= 80: print('B')
-elif score >= 70: print('C')
-elif score >= 60: print('D')
-else: print('F')
+print('A' if 90 <= score <= 100 else 'B' if 80 <= score < 90 else 'C' if 70 <= score < 80 else 'D' if 60 <= score < 70 else 'F')
