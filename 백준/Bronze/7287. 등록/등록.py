@@ -1,2 +1,2 @@
-print(242)
-print('zksl00')
+print(3)
+print("cani99")
