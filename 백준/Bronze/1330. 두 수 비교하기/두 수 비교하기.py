@@ -1,7 +1,6 @@
 import sys
+input = sys.stdin.readline
 
-a, b = map(int, sys.stdin.readline().split())
+A, B = map(int, input().split())
 
-op = '>' if a > b else ('==' if a == b else '<')
-
-sys.stdout.write(op)
+print(">" if A > B else ("==" if A == B else "<"))
