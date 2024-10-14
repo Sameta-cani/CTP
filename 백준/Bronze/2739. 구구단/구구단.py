@@ -1,6 +1,7 @@
 import sys
+input = sys.stdin.readline
 
-n = int(sys.stdin.readline().rstrip())
+N = int(input())
 
 for i in range(1, 10):
-    print(f'{n} * {i} = {n * i}')
+    print(f"{N} * {i} = {N * i}")
