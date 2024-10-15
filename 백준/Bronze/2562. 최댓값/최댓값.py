@@ -1,12 +1,6 @@
 import sys
+input = sys.stdin.readline
 
-max_value = float("-inf")
-max_ind = 0
+data = [int(input()) for _ in range(9)]
 
-for ind in range(1, 10):
-    val = int(sys.stdin.readline().rstrip())
-    if val > max_value:
-        max_value = val
-        max_ind = ind
-
-print(max_value, max_ind, sep='\n')
+print(max(data), data.index(max(data)) + 1)
