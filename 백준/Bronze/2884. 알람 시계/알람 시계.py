@@ -1,6 +1,9 @@
-h, m = map(int, input().split())
+import sys
+input = sys.stdin.readline
 
-new_h = (h - (m < 45)) % 24
-new_m = (m - 45) % 60
+H, M = map(int, input().split())
+H = ((H - 1) if M < 45 else H) % 24
+M = (M - 45) % 60
 
-print(new_h, new_m)
+
+print(H, M)
