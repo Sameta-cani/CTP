@@ -1,7 +1,8 @@
 import sys
+input = sys.stdin.readline
 
-while True:
-    A, B = map(int, sys.stdin.readline().rstrip().split())
-    if not (A and B):
-        break
+A, B = map(int, input().split())
+
+while A and B:
     print(A + B)
+    A, B = map(int, input().split())
