@@ -1,6 +1,7 @@
 import sys
+input = sys.stdin.readline
 
-N = int(sys.stdin.readline().rstrip())
-data = [int(x) for x in sys.stdin.readline().rstrip().split()]
+N = int(input())
+data = list(map(int, input().split()))
 
 print(min(data), max(data))
