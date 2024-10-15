@@ -1,3 +1,1 @@
-import sys
-
-print(ord(sys.stdin.readline().rstrip()))
+print(ord(input()))
