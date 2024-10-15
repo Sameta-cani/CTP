@@ -1,6 +1,7 @@
 import sys
+input = sys.stdin.readline
 
-N = int(sys.stdin.readline().rstrip())
+N = int(input())
 
-for i in range(N-1, -1, -1):
-    print(' ' * i + '*' * (N - i))
+for i in range(1, N + 1):
+    print(' ' * (N - i) + '*' * i)
