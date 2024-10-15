@@ -1,6 +1,7 @@
 import sys
+input = sys.stdin.readline
 
-S = sys.stdin.readline().rstrip()
-i = int(sys.stdin.readline().rstrip())
+S = input().strip()
+r = int(input())
 
-print(S[i-1])
+print(S[r-1])
