@@ -1,6 +1,7 @@
 import sys
+input = sys.stdin.readline
 
-N = int(sys.stdin.readline().rstrip())
-data = sys.stdin.readline().rstrip()
+N = int(input())
+data = sum(list(map(int, list(input().strip()))))
 
-print(sum(map(int, data)))
+print(data)
