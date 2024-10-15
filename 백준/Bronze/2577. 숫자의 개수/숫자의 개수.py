@@ -2,7 +2,10 @@ A = int(input())
 B = int(input())
 C = int(input())
 
-mul = str(A * B * C)
+mul = A * B * C
+data = [0] * 10
 
-for i in range(10):
-    print(mul.count(str(i)))
+for val in str(mul):
+    data[int(val)] += 1
+    
+print(*data, sep='\n')
