@@ -1,3 +1,1 @@
-import sys
-
-print(len(sys.stdin.readline().rstrip().split()))
+print(len(input().split()))
