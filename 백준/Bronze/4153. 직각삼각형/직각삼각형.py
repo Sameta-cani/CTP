@@ -1,7 +1,5 @@
-a, b, c = -1, -1, -1
-
-while 1:
-    a, b, c = sorted(map(int, input().split()))
-    if a == 0 and b == 0 and c == 0:
+while True:
+    sides = sorted(map(int, input().split()))
+    if sides[0] == 0 and sides[1] == 0 and sides[2] == 0:
         break
-    print('right' if a**2 + b**2 == c**2 else 'wrong')
+    print('right' if sides[0]**2 + sides[1]**2 == sides[2]**2 else 'wrong')
