@@ -1,11 +1,10 @@
 for _ in range(int(input())):
     score = 0
-    stack = list()
+    current_streak = 0
     for ch in input().strip():
         if ch == 'O':
-            stack.append(len(stack) + 1)
+            current_streak += 1
+            score += current_streak
         elif ch == 'X':
-            score += sum(stack)
-            stack.clear()
-    score += sum(stack)
-    print(score)
+            current_streak = 0
+    print(score) 
