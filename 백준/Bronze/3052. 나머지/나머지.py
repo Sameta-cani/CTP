@@ -1,8 +1,2 @@
-import sys
-
-remains = set()
-
-for _ in range(10):
-    remains.add(int(sys.stdin.readline().rstrip()) % 42)
-
-print(len(remains))
+ans = len(set(int(input()) % 42 for _ in range(10)))
+print(ans)
