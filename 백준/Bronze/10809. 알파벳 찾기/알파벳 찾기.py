@@ -1,6 +1,7 @@
-import sys
+res = [-1] * 26
 
-S = sys.stdin.readline().rstrip()
-alphabet_positions = [S.find(chr(i)) for i in range(97, 123)]
-
-print(*alphabet_positions)
+for idx, ch in enumerate(input().strip()):
+    if res[ord(ch) - ord('a')] == -1:
+        res[ord(ch) - ord('a')] = idx
+        
+print(*res)
