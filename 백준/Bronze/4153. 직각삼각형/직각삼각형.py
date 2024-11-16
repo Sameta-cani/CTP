@@ -1,9 +1,7 @@
-while True:
-    data = sorted(list(map(int, input().split())))
-    if sum(data) == 0:
-        break
+a, b, c = -1, -1, -1
 
-    if data[0]**2 + data[1]**2 == data[2]**2:
-        print('right')
-    else:
-        print('wrong')
+while 1:
+    a, b, c = sorted(map(int, input().split()))
+    if a == 0 and b == 0 and c == 0:
+        break
+    print('right' if a**2 + b**2 == c**2 else 'wrong')
