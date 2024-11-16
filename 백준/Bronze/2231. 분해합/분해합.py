@@ -1,10 +1,9 @@
 N = int(input())
-gen = 0
 
-for i in range(1, N):
-    digits_sum = sum([int(x) for x in str(i)])
-    if i + digits_sum == N:
-        gen = i
+ans = 0
+for var in range(1, N + 1):
+    if var + sum(map(int, str(var))) == N:
+        ans = var
         break
-
-print(gen)
+    
+print(ans)
