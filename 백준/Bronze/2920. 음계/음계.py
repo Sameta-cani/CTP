@@ -1,8 +1,10 @@
-array = list(map(int, input().split()))
+base = '12345678'
 
-if array == sorted(array):
+data = ''.join(list(input().strip().split()))
+
+if data == base:
     print('ascending')
-elif array == sorted(array, reverse=True):
+elif data == base[::-1]:
     print('descending')
 else:
     print('mixed')
