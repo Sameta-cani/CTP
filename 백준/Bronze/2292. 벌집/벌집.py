@@ -1,8 +1,9 @@
 N = int(input())
 
 cur = 1
-for i in range(N):
-    if cur + i * 6 >= N:
-        print(i + 1)
-        break
+i = 0
+while cur < N:
+    i += 1
     cur += i * 6
+    
+print(i + 1)
