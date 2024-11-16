@@ -1,10 +1,8 @@
-import sys
+N = int(input())
 
-N = int(sys.stdin.readline().rstrip())
-
-count = 1
-
-while N > 1 + 3 * count * (count - 1):
-    count += 1
-
-print(count)
+cur = 1
+for i in range(N):
+    if cur + i * 6 >= N:
+        print(i + 1)
+        break
+    cur += i * 6
