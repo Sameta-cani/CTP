@@ -1,9 +1,9 @@
 N = int(input())
 
-ans = 0
-for var in range(1, N + 1):
-    if var + sum(map(int, str(var))) == N:
-        ans = var
+for var in range(max(1, N - len(str(N)) * 9), N):
+    if var + sum(int(digit) for digit in str(var)) == N:
+        print(var)
         break
     
-print(ans)
+else:
+    print(0)
