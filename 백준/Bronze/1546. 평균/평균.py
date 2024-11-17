@@ -1,9 +1,7 @@
-import sys
+N = int(input())
+current_scores = list(map(int, input().split()))
 
-N = int(sys.stdin.readline().rstrip())
-scores = [int(x) for x in sys.stdin.readline().rstrip().split()]
-M = max(scores)
+M = max(current_scores)
+new_avg = sum(score / M * 100 for score in current_scores) / N
 
-adjusted_avg = sum(score / M * 100 for score in scores) / N
-
-print(adjusted_avg)
+print(new_avg)
