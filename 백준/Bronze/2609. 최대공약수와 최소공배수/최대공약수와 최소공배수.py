@@ -1,10 +1,12 @@
 def gcd(a, b):
-    if b == 0:
-        return a
-    else:
-        return gcd(b, a % b)
-    
-n1, n2 = map(int, input().split())
-g = gcd(n1, n2)
+    while b > 0:
+        a, b = b, a % b
+    return a
 
-print(g, n1 * n2 // g, sep='\n')
+def lcm(a, b):
+    return a * b // gcd(a, b)
+
+a, b = map(int, input().split())
+
+print(gcd(a, b))
+print(lcm(a, b))
