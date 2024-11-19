@@ -1,11 +1,12 @@
 import sys
+input = sys.stdin.readline
 
-N = int(input())
-count = [0] * 10001
+cnt = [0] * 10001
 
-for _ in range(N):
-    count[int(sys.stdin.readline().rstrip())] += 1
+for _ in range(int(input())):
+    cnt[int(input())] += 1
 
-for i in range(10001):
-    for j in range(count[i]):
-        print(i)
+for idx in range(1, 10001):
+    if cnt[idx]:
+        for _ in range(cnt[idx]):
+            print(idx)
