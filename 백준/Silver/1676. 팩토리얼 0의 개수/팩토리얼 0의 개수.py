@@ -1,14 +1,10 @@
-import math
-
 N = int(input())
 
-N_fact_reverse = str(math.factorial(N))[::-1]
+# Count the number of factors of 5 in N!
 count = 0
-
-for ch in N_fact_reverse:
-    if ch == '0':
-        count += 1
-    else:
-        break
+power_of_5 = 5
+while N >= power_of_5:
+    count += N // power_of_5
+    power_of_5 *= 5
 
 print(count)
