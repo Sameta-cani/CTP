@@ -1,9 +1,11 @@
 N = int(input())
-count = 0
 
-for i in range(N * 1000):
-    if '666' in str(i):
-        count += 1
-    if count == N:
-        print(i)
-        break
+result = 666
+cnt = 1
+
+while cnt < N:
+    result += 1
+    if '666' in str(result):
+        cnt += 1
+        
+print(result)
