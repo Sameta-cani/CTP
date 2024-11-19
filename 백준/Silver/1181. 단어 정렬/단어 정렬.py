@@ -1,10 +1,5 @@
-import sys
+data = set(input() for _ in range(int(input())))
 
-N = int(input())
+data = sorted(data, key=lambda x: (len(x), x))
 
-array = list(set(sys.stdin.readline().rstrip() for _ in range(N)))
-
-array.sort(key=lambda x: (len(x), x))
-
-for item in array:
-    sys.stdout.write(item + '\n')
+print('\n'.join(data))
