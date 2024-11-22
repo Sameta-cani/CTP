@@ -1,6 +1,9 @@
-N = int(input())
+import sys
+input = sys.stdin.readline
 
-array = sorted([tuple(map(int, input().split())) for _ in range(N)], key=lambda x: (x[0], x[1]))
+points = [tuple(map(int, input().split())) for _ in range(int(input()))]
 
-for x, y in array:
-    print(f'{x} {y}')
+points.sort(key=lambda x: [x[0], [x[1]]])
+
+for point in points:
+    print(*point)
