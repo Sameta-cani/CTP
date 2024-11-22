@@ -1,10 +1,6 @@
-import sys
+data = [tuple(input().split()) for _ in range(int(input()))]
 
-N = int(input())
+data.sort(key=lambda x: int(x[0]))
 
-array = [tuple(sys.stdin.readline().rstrip().split()) for _ in range(N)]
-
-array.sort(key=lambda x: int(x[0]))
-
-for age, name in array:
-    sys.stdout.write(f'{age} {name}\n')
+for val in data:
+    print(*val)
