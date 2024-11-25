@@ -1,11 +1,13 @@
 N = int(input())
 
-for i in range(N//5, -1, -1):
-    if (N - (5 * i)) % 3 == 0:
-        j = (N - (5 * i)) // 3
-        min_count = i + j
-        break
-    else:
-        min_count = -1
+dp = [float('inf')] * (N + 1)
 
-print(min_count)
+if N >= 3:
+    dp[3] = 1
+if N >= 5:
+    dp[5] = 1
+    
+for i in range(6, N + 1):
+    dp[i] = min(dp[i - 3] + 1, dp[i - 5] + 1)
+    
+print(dp[N] if dp[N] != float('inf') else -1)
