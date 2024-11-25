@@ -1,12 +1,9 @@
 from collections import deque
 
-N = int(input())
+cards = deque(list(range(1, int(input()) + 1)))
 
-array = deque(list(range(1, N + 1)))
-
-while len(array) != 1:
-    array.popleft()
-    array.append(array.popleft())
-
-
-print(array[0])
+while len(cards) > 1:
+    cards.popleft()
+    cards.rotate(-1)
+    
+print(cards[0])
