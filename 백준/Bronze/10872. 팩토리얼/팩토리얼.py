@@ -1,8 +1,8 @@
 N = int(input())
 
-result = 1
+dp = [1, 1] + [0] * 11
 
-for i in range(1, N + 1):
-    result *= i
+for idx in range(2, len(dp)):
+    dp[idx] = idx * dp[idx - 1]
 
-print(result)
+print(dp[N])
