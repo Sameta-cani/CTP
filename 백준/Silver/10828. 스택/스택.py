@@ -1,10 +1,8 @@
 import sys
 input = sys.stdin.readline
 
-N = int(input().rstrip())
 stack = []
-
-for _ in range(N):
+for _ in range(int(input())):
     command = input().rstrip().split()
     prompt = command[0]
 
@@ -15,6 +13,6 @@ for _ in range(N):
     elif prompt == 'size':
         print(len(stack))
     elif prompt == 'empty':
-        print(1 if not stack else 0)
+        print(0 if stack else 1)
     elif prompt == 'top':
         print(stack[-1] if stack else -1)
