@@ -1,3 +1,4 @@
-word = input()
+word = input().strip()
 
-print(*[c.lower() if c.isupper() else c.upper() for c in word], sep='')
+for ch in word:
+    print(ch.lower() if ch.isupper() else ch.upper(), end='')
