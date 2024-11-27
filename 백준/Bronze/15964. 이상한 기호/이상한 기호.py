@@ -1,3 +1,6 @@
+def cal(A, B):
+    return (A + B) * (A - B)
+
 A, B = map(int, input().split())
 
-print(A**2 - B**2)
+print(cal(A, B))
