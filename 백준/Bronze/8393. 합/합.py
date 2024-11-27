@@ -1,5 +1,8 @@
-import sys
+n = int(input())
 
-n = int(sys.stdin.readline().rstrip())
+dp = [0] * 10001
 
-print(n * (n + 1) // 2)
+for idx in range(1, len(dp)):
+    dp[idx] = idx + dp[idx - 1]
+
+print(dp[n])
