@@ -1,13 +1,8 @@
-import sys
-
-N, M = map(int, sys.stdin.readline().rstrip().split())
-
-A = [list(map(int, sys.stdin.readline().rstrip().split())) for _ in range(N)]
+N, M = map(int, input().split())
+mat_A = [list(map(int, input().split())) for _ in range(N)]
+mat_B = [list(map(int, input().split())) for _ in range(N)]
 
 for i in range(N):
-    data = [int(x) for x in sys.stdin.readline().rstrip().split()]
     for j in range(M):
-        A[i][j] += data[j]
-
-for row in A:
-    print(*row)
+        print(mat_A[i][j] + mat_B[i][j], end=' ')
+    print()
