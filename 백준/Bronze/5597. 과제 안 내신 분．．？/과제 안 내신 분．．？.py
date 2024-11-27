@@ -1,9 +1,7 @@
-import sys
-
-not_submitted = [True] * 30
-
+att = [1] * 31
 for _ in range(28):
-    n = int(sys.stdin.readline().rstrip())
-    not_submitted[n-1] = False
+    att[int(input())] = 0
 
-print(*[i + 1 for i, submitted in enumerate(not_submitted) if submitted], sep='\n')
+for idx in range(1, len(att)):
+    if att[idx]:
+        print(idx)
