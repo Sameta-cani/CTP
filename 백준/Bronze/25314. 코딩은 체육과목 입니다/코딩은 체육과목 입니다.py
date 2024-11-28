@@ -1,5 +1,3 @@
-import sys
+N = int(input())
 
-N = int(sys.stdin.readline().rstrip()) // 4
-
-print('long ' * N + 'int')
+print('long ' * (N // 4) + 'int')
