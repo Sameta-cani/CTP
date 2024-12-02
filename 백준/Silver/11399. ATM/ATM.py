@@ -1,16 +1,11 @@
 import sys
+input = sys.stdin.readline
 
 N = int(input())
+time_per = list(map(int, input().split()))
 
-array = list(map(int, sys.stdin.readline().rstrip().split()))
-array.sort()
+time_per.sort()
+for idx in range(1, N):
+    time_per[idx] = time_per[idx - 1] + time_per[idx]
 
-prev_time = array[0]
-total_time = array[0]
-
-for time in array[1:]:
-    time += prev_time
-    total_time += time
-    prev_time = time
-    
-print(total_time)
+print(sum(time_per))
