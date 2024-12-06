@@ -1,13 +1,12 @@
-d = [0] * 101
+MAX_N = 101
 
-d[1] = 1
-d[2] = 1
+dp = [0] * (MAX_N)
+dp[1] = dp[2] = dp[3] = 1
+dp[4] = dp[5] = 2
 
-for i in range(3, 101):
-    d[i] = d[i - 3] + d[i - 2]
+for idx in range(6, MAX_N):
+    dp[idx] = dp[idx - 1] + dp[idx - 5]
 
-T = int(input())
-
-for _ in range(T):
+for _ in range(int(input())):
     N = int(input())
-    print(d[N])
+    print(dp[N])
