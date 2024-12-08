@@ -1,6 +1,4 @@
-import sys
+data = list(map(int, input().split()))
 
-pieces = [1, 1, 2, 2, 2, 8]
-data = [int(x) for x in sys.stdin.readline().rstrip().split()]
-
-print(*[piece - d for piece, d in zip(pieces, data)])
+for a, b in zip((1, 1, 2, 2, 2, 8), data):
+    print(a - b, end=' ')
