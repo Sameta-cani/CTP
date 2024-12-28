@@ -1,5 +1,3 @@
-import sys
-
-y = int(sys.stdin.readline().rstrip())
+y = int(input())
 
 print(y - 543)
