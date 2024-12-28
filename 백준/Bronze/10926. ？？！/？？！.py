@@ -1,5 +1,3 @@
-import sys
+existed_id = input().strip()
 
-id = sys.stdin.readline().rstrip()
-
-print(id + '??!')
+print(f"{existed_id}??!")
