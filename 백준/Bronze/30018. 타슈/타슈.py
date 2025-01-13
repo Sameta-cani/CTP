@@ -1,15 +1,11 @@
-import sys
-
-input = sys.stdin.readline
-
 N = int(input())
-A_array = list(map(int, input().split()))
-B_array = list(map(int, input().split()))
 
-count = 0
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
 
-for i in range(N):
-    if A_array[i] < B_array[i]:
-        count += B_array[i] - A_array[i]
-
-print(count)
+res = 0
+for idx in range(N):
+    if B[idx] > A[idx]:
+        res += B[idx] - A[idx]
+        
+print(res)
