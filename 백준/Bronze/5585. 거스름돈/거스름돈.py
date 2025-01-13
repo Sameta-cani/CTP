@@ -1,12 +1,10 @@
-import sys
+coin_types = [500, 100, 50, 10, 5, 1]
 
-input = sys.stdin.readline
+N = 1000 - int(input())
+cnt = 0
 
-count = 0
-money = 1000 - int(input())
-
-for coin in [500, 100, 50, 10, 5, 1]:
-    count += money // coin
-    money %= coin
-
-print(count)
+for coin in coin_types:
+    cnt += (N // coin)
+    N %= coin
+    
+print(cnt)
