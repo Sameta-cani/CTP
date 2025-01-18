@@ -1,3 +1,2 @@
-N = int(input())
-
-print(*[value for value in range(N, 0, -1)], sep='\n')
+for idx in range(int(input()), 0, -1):
+    print(idx)
