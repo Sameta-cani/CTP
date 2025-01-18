@@ -1,5 +1,6 @@
-N, M = map(int, input().split())
-
-while N != 0 and M != 0:
-    print('Yes' if N > M else 'No')
-    N, M = map(int, input().split())
+while True:
+    a, b = map(int, input().split())
+    if a == 0 and b == 0:
+        break
+    
+    print("Yes" if a > b else "No")
