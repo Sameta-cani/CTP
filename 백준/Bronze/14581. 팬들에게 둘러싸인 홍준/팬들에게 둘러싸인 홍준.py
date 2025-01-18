@@ -1,5 +1,5 @@
-id = input()
+name = input().strip()
 
-print(f''':fan::fan::fan:
-:fan::{id}::fan:
-:fan::fan::fan:''')
+print(":fan::fan::fan:")
+print(f":fan::{name}::fan:")
+print(":fan::fan::fan:")
