@@ -1,10 +1,14 @@
+from collections import Counter
+
 angles = [int(input()) for _ in range(3)]
 
-if sum(angles) != 180:
-    print('Error')
-elif len(set(angles)) == 1:
+if angles.count(60) == 3:
     print('Equilateral')
-elif len(set(angles)) == 2:
-    print('Isosceles')
 else:
-    print('Scalene')
+    if sum(angles) == 180:
+        if len(Counter(angles).most_common()) == 2:
+            print("Isosceles")
+        else:
+            print("Scalene")
+    else:
+        print('Error')
