@@ -1,4 +1,3 @@
-A = input()
-B = input()
-
-print('go' if len(A) >= len(B) else 'no')
+a = input().strip()
+b = input().strip()
+print("no" if len(a) < len(b) else "go")
