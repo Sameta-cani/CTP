@@ -1,3 +1,3 @@
-year = int(input())
+y = int(input())
 
-print('A')
+print("A")
