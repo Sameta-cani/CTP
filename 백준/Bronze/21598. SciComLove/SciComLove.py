@@ -1,4 +1,3 @@
 N = int(input())
 
-for _ in range(N):
-    print('SciComLove')
+print("SciComLove\n" * N)
