@@ -1,9 +1,4 @@
-import sys
+d = int(input())
+cars = list(map(int, input().split()))
 
-input = sys.stdin.readline
-
-N = int(input())
-
-array = list(map(int, input().split()))
-
-print(array.count(N))
+print(cars.count(d))
