@@ -1,4 +1,2 @@
-N = int(input())
-
-for i in range(N, 0, -1):
-    print('*' * i)
+for idx in range(int(input()), 0, -1):
+    print('*' * idx)
