@@ -1,8 +1,6 @@
-S = input()
+sen_cnt = [0] * (ord('z') - ord('a') + 1)
 
-alphabets = [0] * 26
-
-for alphabet in S:
-    alphabets[ord(alphabet) - ord('a')] += 1
-
-print(*alphabets, sep=' ')
+for c in input().strip():
+    sen_cnt[(ord(c) - ord('a'))] += 1
+    
+print(*sen_cnt)
