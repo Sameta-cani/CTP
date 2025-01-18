@@ -1,16 +1,16 @@
-l = int(input())
+lambda_value = int(input())
 
-if 620 <= l <= 780:
-    print('Red')
-elif 590 <= l < 620:
-    print('Orange')
-elif 570 <= l < 590:
-    print('Yellow')
-elif 495 <= l < 570:
-    print('Green')
-elif 450 <= l < 495:
-    print('Blue')
-elif 425 <= l < 450:
-    print('Indigo')
-else:
-    print('Violet')
+if 620 <= lambda_value <= 780:
+    print("Red")
+elif 590 <= lambda_value < 620:
+    print("Orange")
+elif 570 <= lambda_value < 590:
+    print("Yellow")
+elif 495 <= lambda_value < 570:
+    print("Green")
+elif 450 <= lambda_value < 495:
+    print("Blue")
+elif 425 <= lambda_value < 450:
+    print("Indigo")
+elif 380 <= lambda_value < 425:
+    print("Violet")
