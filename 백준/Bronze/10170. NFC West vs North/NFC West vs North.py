@@ -1,4 +1,4 @@
-print('''NFC West       W   L  T
+print(r"""NFC West       W   L  T
 -----------------------
 Seattle        13  3  0
 San Francisco  12  4  0
@@ -10,4 +10,4 @@ NFC North      W   L  T
 Green Bay      8   7  1
 Chicago        8   8  0
 Detroit        7   9  0
-Minnesota      5  10  1''')
+Minnesota      5  10  1""")
