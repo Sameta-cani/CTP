@@ -1,3 +1,3 @@
-ch = input()
+alphabet = input().strip()
 
-print("Naver D2" if ch in ('N', 'n') else "Naver Whale")
+print("Naver D2" if alphabet in ("N", "n") else "Naver Whale")
