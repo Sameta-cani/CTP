@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 31120 KB, 시간: 40 ms
+메모리: 32412 KB, 시간: 32 ms
 
 ### 분류
 
@@ -12,7 +12,7 @@
 
 ### 제출 일자
 
-2024년 4월 8일 21:38:09
+2025년 1월 18일 17:56:39
 
 ### 문제 설명
 
@@ -28,12 +28,12 @@
 		<li>
 		<p><strong>MatKor</strong></p>
 
-		<p><img alt="" src="" style="width: 320px; max-width: 100%;"></p>
+		<p><img alt="" src="https://upload.acmicpc.net/94f2bdde-bb90-4677-a8ed-afbd994590d6/-/crop/1120x429/0,0/-/preview/" style="width: 320px; max-width: 100%;"></p>
 		</li>
 		<li>
 		<p><strong>WiCys</strong></p>
 
-		<p><img alt="" src="" style="width: 320px; max-width: 100%;"></p>
+		<p><img alt="" src="https://upload.acmicpc.net/a17b9acf-3278-41f4-9cf9-7a01867e7b9d/-/crop/1107x367/0,0/-/preview/" style="width: 320px; max-width: 100%;"></p>
 		</li>
 	</ul>
 	</li>
@@ -42,12 +42,12 @@
 		<li>
 		<p><strong>CyKor</strong></p>
 
-		<p><img alt="" src="" style="width: 320px; max-width: 100%;"></p>
+		<p><img alt="" src="https://upload.acmicpc.net/0a2106e2-c31d-4eca-a2de-bc64b628b457/-/preview/" style="width: 320px; max-width: 100%;"></p>
 		</li>
 		<li>
 		<p><strong>AlKor</strong></p>
 
-		<p><img alt="" src="" style="width: 320px; max-width: 100%;"></p>
+		<p><img alt="" src="https://upload.acmicpc.net/f67d87fa-3e8b-4cdd-84c3-c8602a91e795/-/crop/1118x298/0,0/-/preview/" style="width: 320px; max-width: 100%;"></p>
 		</li>
 	</ul>
 	</li>
@@ -56,7 +56,7 @@
 		<li>
 		<p><strong>$clear</strong></p>
 
-		<p><img alt="" src="" style="width: 320px; max-width: 100%;"></p>
+		<p><img alt="" src="https://upload.acmicpc.net/a18d2cdc-cd08-4852-8e6f-87c9a3bbba5f/-/crop/1127x305/0,0/-/preview/" style="width: 320px; max-width: 100%;"></p>
 		</li>
 	</ul>
 	</li>

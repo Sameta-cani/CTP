@@ -1,12 +1,9 @@
-C = input()
+key_dict = {
+    "M": "MatKor",
+    "W": "WiCys",
+    "C": "CyKor",
+    "A": "AlKor",
+    "$": "$clear"
+}
 
-if C == 'M':
-    print('MatKor')
-elif C == 'W':
-    print('WiCys')
-elif C == 'C':
-    print('CyKor')
-elif C == 'A':
-    print('AlKor')
-elif C == '$':
-    print('$clear')
+print(key_dict.get(input().strip()))
