@@ -1,9 +1,7 @@
 N = int(input())
 
-one, two, three = 0, 0, 0
+sum_N = sum(range(1, N + 1))
 
-for value in range(1, N + 1):
-    one += value
-    three += value**3
-
-print(one, one*one, three, sep='\n')
+print(sum_N)
+print(sum_N**2)
+print(sum_N**2)
