@@ -1,8 +1,3 @@
-N = int(input())
-
-for _ in range(N):
-    pw = input()
-    if 6 <= len(pw) <= 9:
-        print('yes')
-    else:
-        print('no')
+for _ in range(int(input())):
+    pw = input().strip()
+    print('yes' if 6 <= len(pw) <= 9 else 'no')
