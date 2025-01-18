@@ -1,5 +1,5 @@
-label = "WelcomeToSMUPC"
+msg = "WelcomeToSMUPC"
 
 N = int(input())
 
-print(label[N % len(label) - 1])
+print(msg[(N - 1) % len(msg)])
