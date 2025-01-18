@@ -1,3 +1,1 @@
-word = input()
-
-print(word.upper())
+print(input().strip().upper())
