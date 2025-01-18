@@ -1,3 +1,1 @@
-N = int(input())
-
-print('Leading the Way to the Future' if N else 'YONSEI')
+print("Leading the Way to the Future" if int(input()) else "YONSEI")

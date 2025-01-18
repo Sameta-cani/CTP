@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 31120 KB, 시간: 44 ms
+메모리: 32412 KB, 시간: 32 ms
 
 ### 분류
 
@@ -12,11 +12,11 @@
 
 ### 제출 일자
 
-2024년 3월 19일 01:27:29
+2025년 1월 18일 16:57:01
 
 ### 문제 설명
 
-<p style="text-align: center;"><img alt="" src="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/problem/15680/1.png" style="width: 449px; height: 134px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="width: 449px; height: 134px;"></p>
 
 <p>연세대학교의 영문명은 YONSEI, 슬로건은 Leading the Way to the Future이다.</p>
 
