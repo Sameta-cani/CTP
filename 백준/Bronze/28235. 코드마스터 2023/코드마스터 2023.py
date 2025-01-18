@@ -1,10 +1,8 @@
-Abb = input()
+school_dict = {
+    "SONGDO": "HIGHSCHOOL",
+    "CODE": "MASTER",
+    "2023": "0611",
+    "ALGORITHM": "CONTEST"
+}
 
-if Abb == 'SONGDO':
-    print('HIGHSCHOOL')
-elif Abb == 'CODE':
-    print('MASTER')
-elif Abb == '2023':
-    print('0611')
-elif Abb == 'ALGORITHM':
-    print('CONTEST')
+print(school_dict.get(input().strip()))
