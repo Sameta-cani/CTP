@@ -1,8 +1,10 @@
 N, A, B = map(int, input().split())
 
-if A < B:
-    print('Bus')
-elif A == B:
-    print('Anything')
+sub = N + B
+
+if A > B:
+    print("Subway")
+elif A < B:
+    print("Bus")
 else:
-    print('Subway')
+    print("Anything")
