@@ -1,15 +1,10 @@
-import sys
+from collections import Counter
 
-A, B, C = map(int, sys.stdin.readline().rstrip().split())
+dices = Counter(list(map(int, input().split()))).most_common()
 
-unique_count = len(set([A, B, C]))
-
-if unique_count == 1:
-    print(10000 + A * 1000)
-elif unique_count == 2:
-    if A == B or A == C:
-        print(1000 + A * 100)
-    else:
-        print(1000 + B * 100)
-else:
-    print(max(A, B, C) * 100)
+if len(dices) == 1:
+    print(10000 + dices[0][0] * 1000)
+elif len(dices) == 2:
+    print(1000 + dices[0][0] * 100)
+elif len(dices) == 3:
+    print(max(dices, key=lambda x: x[0])[0] * 100)
