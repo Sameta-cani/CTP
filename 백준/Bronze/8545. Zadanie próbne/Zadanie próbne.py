@@ -1,3 +1,1 @@
-ch = input()
-
-print(ch[::-1])
+print(input().strip()[::-1])
