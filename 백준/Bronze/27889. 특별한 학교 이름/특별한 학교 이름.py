@@ -1,10 +1,8 @@
-Abb = input()
+school_dict = {
+    "NLCS": "North London Collegiate School",
+    "BHA": "Branksome Hall Asia",
+    "KIS": "Korea International School",
+    "SJA": "St. Johnsbury Academy"
+}
 
-if Abb == 'NLCS':
-    print('North London Collegiate School')
-elif Abb == 'BHA':
-    print('Branksome Hall Asia')
-elif Abb == 'KIS':
-    print('Korea International School')
-elif Abb == 'SJA':
-    print('St. Johnsbury Academy')
+print(school_dict.get(input().strip()))
