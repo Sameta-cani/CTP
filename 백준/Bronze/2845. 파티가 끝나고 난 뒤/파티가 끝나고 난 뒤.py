@@ -1,9 +1,7 @@
-import sys
-
 L, P = map(int, input().split())
-ans = L * P
+total = L * P
 
-array = list(map(int, input().split()))
+ans = list(map(int, input().split()))
 
-for val in array:
-    print(val - ans, end=' ')
+for val in ans:
+    print(val - total, end=' ')
