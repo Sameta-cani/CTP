@@ -1,4 +1,2 @@
-n = int(input())
-
-print(n)
+print(int(input()))
 print(1)
