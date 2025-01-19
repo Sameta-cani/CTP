@@ -1,7 +1,4 @@
-import sys
+times = sum([int(input()) for _ in range(4)])
 
-input = sys.stdin.readline
-
-total = sum([int(input()) for _ in range(4)])
-
-print(total // 60, total % 60)
+print(times // 60)
+print(times % 60)
