@@ -1,10 +1,10 @@
-# [Bronze V] 달달함이 넘쳐흘러 - 17256 
+# [Bronze IV] 달달함이 넘쳐흘러 - 17256 
 
 [문제 링크](https://www.acmicpc.net/problem/17256) 
 
 ### 성능 요약
 
-메모리: 31120 KB, 시간: 40 ms
+메모리: 32412 KB, 시간: 36 ms
 
 ### 분류
 
@@ -12,7 +12,7 @@
 
 ### 제출 일자
 
-2024년 3월 19일 15:26:22
+2025년 1월 19일 17:58:56
 
 ### 문제 설명
 
@@ -34,7 +34,7 @@
 
 <p style="text-align: center;">a 🍰 b = (a.z + b.x, a.y × b.y, a.x + b.z)</p>
 
-<p style="text-align: center;"><img alt="케이크와 마카롱 사진" src="" style="height: 277px; width: 400px;"></p>
+<p style="text-align: center;"><img alt="케이크와 마카롱 사진" src="https://upload.acmicpc.net/241defcd-0b6c-461f-b354-a2435f3ba56c/-/crop/1549x1071/0,0/-/preview/" style="height: 277px; width: 400px;"></p>
 
 <p>SCCC의 회장 욱제는 케이크 수를 이용해 문제를 만들기로 했다. 마카롱과 욱제를 기쁘게 하기 위해서 문제를 풀어주자! 욱제가 만든 문제는 다음과 같다.</p>
 

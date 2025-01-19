@@ -1,4 +1,4 @@
-a = list(map(int, input().split()))
-c = list(map(int, input().split()))
+ax, ay, az = map(int, input().split())
+cx, cy, cz = map(int, input().split())
 
-print(c[0] - a[2], c[1] // a[1], c[2] - a[0])
+print(cx - az, cy // ay, cz - ax)
