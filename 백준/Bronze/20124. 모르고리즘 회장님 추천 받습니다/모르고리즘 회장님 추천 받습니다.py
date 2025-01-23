@@ -1,12 +1,9 @@
 import sys
 
-N = int(input())
+input = sys.stdin.readline
 
-scores = []
-for _ in range(N):
-    scores.append(tuple(sys.stdin.readline().rstrip().split()))
+data = [input().strip().split() for _ in range(int(input()))]
 
-scores.sort()
-scores.sort(key=lambda x: int(x[1]), reverse=True)
+data.sort(key=lambda x: (-int(x[1]), x[0]))
 
-sys.stdout.write(scores[0][0])
+print(data[0][0])
