@@ -1,3 +1,1 @@
-array = list(map(int, input().split()))
-
-print(sorted(array)[1])
+print(sorted(list(map(int, input().split())))[1])
