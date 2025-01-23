@@ -1,7 +1,10 @@
-T = int(input())
+import sys
 
-for _ in range(T):
-    scores = list(map(int, input().split()))
-    scores.remove(max(scores))
-    scores.remove(min(scores))
-    print(sum(scores) if max(scores) - min(scores) < 4 else 'KIN')
+input = sys.stdin.readline
+
+for _ in range(int(input())):
+    scores = sorted(list(map(int, input().split())))[1:-1]
+    if (scores[-1] - scores[0]) >= 4:
+        print("KIN")
+    else:
+        print(sum(scores))
