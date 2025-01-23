@@ -1,3 +1,7 @@
+import sys
+
+input = sys.stdin.readline
+
 W_score = sum(sorted([int(input()) for _ in range(10)])[-3:])
 K_score = sum(sorted([int(input()) for _ in range(10)])[-3:])
 
