@@ -1,3 +1,1 @@
-import sys
-
-print(sorted(list(map(int, sys.stdin.readline().rstrip().split())))[1])
+print(sorted(list(map(int, input().split())))[1])
