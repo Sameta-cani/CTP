@@ -1,12 +1,11 @@
 import sys
 
-N = int(input())
+input = sys.stdin.readline
 
-scores = []
-
-for _ in range(N):
-    array = list(map(int, sys.stdin.readline().rstrip().split()))
-    score = max(array[:2]) + sum(sorted(array[2:])[-2:])
-    scores.append(score)
-
-print(max(scores))
+max_score = -float('inf')
+for _ in range(int(input())):
+    scores = list(map(int, input().split()))
+    res = max(scores[:2]) + sum(sorted(scores[2:])[-2:])
+    max_score = max(max_score, res)
+    
+print(max_score)
