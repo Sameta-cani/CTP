@@ -1,12 +1,9 @@
-import sys
+n = int(input())
 
-input = sys.stdin.readline
+dp = [0] * (n + 1)
+dp[1] = 1
 
-N = int(input())
-
-dp = [0, 1, 1] + [0] * 45
-
-for i in range(3, 48):
-    dp[i] = dp[i - 1] + dp[i - 2]
-
-print(dp[N])
+for idx in range(2, n + 1):
+    dp[idx] = dp[idx - 1] + dp[idx - 2]
+    
+print(dp[n])
