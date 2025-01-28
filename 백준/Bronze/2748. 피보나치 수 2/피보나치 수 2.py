@@ -1,8 +1,9 @@
-d = [0, 1, 1] + [0] * 90
+n = int(input())
 
-for i in range(2, 93):
-    d[i] = d[i - 1] + d[i - 2]
+dp = [0] * (n + 1)
+dp[1] = 1
 
-N = int(input())
-
-print(d[N])
+for idx in range(2, n + 1):
+    dp[idx] = dp[idx - 1] + dp[idx - 2]
+    
+print(dp[n])
