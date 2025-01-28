@@ -1,14 +1,17 @@
-max_hour = 490
+import sys
 
-d = [0] * 491
-d[1] = 1
-d[2] = 1
+input = sys.stdin.readline
 
-for i in range(3, max_hour + 1):
-    d[i] = d[i - 1] + d[i - 2]
+dp = [0] * 491
+dp[1] = 1
 
-hour = int(input())
-
-while hour != -1:
-    print(f'Hour {hour}: {d[hour]} cow(s) affected')
-    hour = int(input())
+for idx in range(2, len(dp)):
+    dp[idx] = dp[idx - 1] + dp[idx - 2]
+    
+while True:
+    n = int(input())
+    
+    if n == -1:
+        break
+    
+    print(f"Hour {n}: {dp[n]} cow(s) affected")
