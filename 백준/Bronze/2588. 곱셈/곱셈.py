@@ -1,13 +1,7 @@
-import sys
+n1 = int(input())
+n2 = int(input())
 
-exp1 = int(sys.stdin.readline().rstrip())
-exp2 = int(sys.stdin.readline().rstrip())
+ns = [n1 * int(str(n2)[idx]) for idx in range(2, -1, -1)]
 
-digits_of_exp2 = str(exp2)
-
-# exp2의 각 자릿수에 대해 exp1과의 곱을 역순으로 출력
-for digit in reversed(digits_of_exp2):
-    print(exp1 * int(digit))
-
-# 두 수의 총 곱 출력
-print(exp1 * exp2)
+print(*ns, sep='\n')
+print(n1 * n2)
