@@ -1,10 +1,10 @@
-N = int(input())
+dp = [0] * 46
+dp[0] = 1
+dp[1] = 1
 
-d = [0, 1, 1] + [0] * 45
-
-for i in range(3, 46 + 1):
-    d[i] = d[i - 1] + d[i - 2]
-
-for _ in range(N):
-    x = int(input())
-    print(d[x + 1])
+for idx in range(2, len(dp)):
+    dp[idx] = dp[idx - 1] + dp[idx - 2]
+    
+for _ in range(int(input())):
+    n = int(input())
+    print(dp[n])
