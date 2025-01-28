@@ -1,14 +1,11 @@
-import sys
+dials = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
 
-S = sys.stdin.readline().rstrip()
+word = input().strip()
 
-time = 0
-for c in S:
-    # 문자에 대한 다이얼 시간 계산
-    dial_time = (ord(c) - ord('A')) // 3 + 3
-    # 'S', 'V', 'Y', 'Z'는 하나 앞의 그룹에 속함
-    if c in 'SVYZ':
-        dial_time -= 1
-    time += dial_time
-
-print(time)
+res = 0
+for ch in word:
+    for dial in dials:
+        if ch in dial:
+            res += dials.index(dial) + 3
+            
+print(res)
