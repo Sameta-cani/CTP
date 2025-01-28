@@ -1,7 +1,6 @@
-import sys
+A, B = input().split()
 
-A, B = sys.stdin.readline().rstrip().split()
-
-A, B = int(A[::-1]), int(B[::-1])
+A = int(A[::-1])
+B = int(B[::-1])
 
 print(max(A, B))
