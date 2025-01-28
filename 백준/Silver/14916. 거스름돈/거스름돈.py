@@ -1,16 +1,12 @@
-# 거스름돈 액수 N 입력
-N = int(input())
+n = int(input())
+INF = 100001
 
-# 거스름돈 종류
-array = [2, 5]
-
-# 한 번 계산된 결과를 저장하기 위한 DP 테이블 초기화
-dp = [100001] * (N + 1)
-
-# 다이나믹 프로그래밍(Dynamic Programming) 진행(보텀업)
+coins = [2, 5]
+dp = [INF] * (n + 1)
 dp[0] = 0
-for val in array:
-    for i in range(val, N + 1):
-        dp[i] = min(dp[i], dp[i - val] + 1)
 
-print(dp[N] if dp[N] != 100001 else -1)
+for coin in coins:
+    for idx in range(coin, n + 1):
+        dp[idx] = min(dp[idx], dp[idx - coin] + 1)
+        
+print(dp[n] if dp[n] != INF else -1)
