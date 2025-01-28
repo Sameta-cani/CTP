@@ -1,18 +1,10 @@
-def fib(n):
-    if n == 1 or n == 2:
-        return 1
-    else:
-        return fib(n - 1) + fib(n - 2)
+n = int(input())
 
-def fibonacci(n):
-    count = 0
-    d = [0, 1, 1] + [0] * 40
-    for i in range(3, 43):
-        d[i] = d[i - 1] + d[i - 2]
-        count += 1
-        if i == n:
-            return count
+dp = [0] * (n + 1)
+dp[0] = 0
+dp[1] = 1
 
-N = int(input())
-
-print(fib(N), fibonacci(N))
+for idx in range(2, n + 1):
+    dp[idx] = dp[idx - 1] + dp[idx - 2]
+    
+print(dp[n], (n - 2))
