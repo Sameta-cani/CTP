@@ -1,4 +1,9 @@
 A, B = map(int, input().split())
 C = int(input())
 
-print((A + ((B  + C) // 60)) % 24, (B + C) % 60)
+total_m = A * 60 + B + C
+
+h = (total_m // 60) % 24
+m = (total_m % 60)
+
+print(h, m)
