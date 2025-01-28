@@ -1,10 +1,8 @@
-import sys
+N, M = map(int, input().split())
 
-N, M = map(int, sys.stdin.readline().rstrip().split())
-positions = list(range(1, N+1))
-
+array = list(range(N + 1))
 for _ in range(M):
-    i, j = map(int, sys.stdin.readline().rstrip().split())
-    positions[i-1:j] = positions[i-1:j][::-1]
-
-print(*positions)
+    i, j = map(int, input().split())
+    array[i:j + 1] = array[i:j + 1][::-1]
+        
+print(*array[1:])
