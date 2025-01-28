@@ -1,16 +1,10 @@
-import math
+def combination(M, N):
+    result = 1
+    for i in range(N):
+        result *= (M - i)
+        result //= i + 1
+    return result
 
-T = int(input())
-
-for _ in range(T):
+for _ in range(int(input())):
     N, M = map(int, input().split())
-
-    N_fac = math.factorial(N)
-
-    dp = [0] * N
-    dp[0] = (M - N + 1)
-
-    for i in range(1, N):
-        dp[i] = dp[i - 1] * (dp[0] + i)
-
-    print(dp[-1] // N_fac)
+    print(combination(M, N))
