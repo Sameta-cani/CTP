@@ -1,12 +1,7 @@
-import sys
-
-input = sys.stdin.readline
-
 N = int(input())
 
-dp = [4, 6] + [0] * 80
-
-for i in range(2, N + 1):
-    dp[i] = dp[i - 2] + dp[i - 1]
+x, y = 1, 1
+for _ in range(N-1):
+    x, y = y, x + y
     
-print(dp[N - 1])
+print(x * 2 + y * 2)
