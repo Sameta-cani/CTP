@@ -1,15 +1,10 @@
-import sys
+max_idx = 0
+max_score = -1
 
-input = sys.stdin.readline
-
-scores = [list(map(int, input().split())) for _ in range(5)]
-
-max_value = -int(1e9)
-max_index = 0
-
-for idx, score in enumerate(scores, start=1):
-    if max_value < sum(score):
-        max_value = sum(score)
-        max_index = idx
-
-print(max_index, max_value)
+for idx in range(1, 6):
+    sum_score = sum(map(int, input().split()))
+    if sum_score > max_score:
+        max_score = sum_score
+        max_idx = idx
+        
+print(max_idx, max_score)
